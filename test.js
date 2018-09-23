@@ -273,7 +273,7 @@ describe('Sorter', () => {
         sorter.add({ age: 20 });
         sorter.add({ age: 18 });
         sorter.add({ age: 16 });
-  
+
         sorter.setComparator(AGE_COMPARATOR);
         sorter.sort([0, 1]);
   
@@ -286,13 +286,13 @@ describe('Sorter', () => {
         sorter.add({ age: 20 });
         sorter.add({ age: 18 });
         sorter.add({ age: 16 });
-  
+
         sorter.setComparator(AGE_COMPARATOR);
         sorter.sort([0, 1]);
 
         sorter.add({ age: 14 });
         sorter.sort([3, 2]);
-  
+
         assert.deepEqual(sorter.at(0).age, 18);
         assert.deepEqual(sorter.at(1).age, 20);
         assert.deepEqual(sorter.at(2).age, 14);
